@@ -81,6 +81,10 @@ export default function ManagerPanel() {
       fetchData();
     }
   }, [token, activeTab]);
+  
+  useEffect(() => {
+  fetchData();
+}, []); // eslint-disable-next-line react-hooks/exhaustive-deps
 
  const handleApprove = async (invoiceId) => {
   if (!window.confirm('✅ Approve this invoice?')) return;
